@@ -22,7 +22,7 @@ type Translator struct{}
 func (t Translator) Translate(ctx context.Context, sub evo.Substrate) (net evo.Network, err error) {
 
 	// Construct the empty Network
-	z := Network{
+	z := &Network{
 		Neurons:  make([]Neuron, len(sub.Nodes)),
 		Synapses: make([]Synapse, len(sub.Conns)),
 	}

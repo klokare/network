@@ -44,7 +44,7 @@ var (
 func XorTest(net evo.Network) func(*testing.T) {
 	return func(t *testing.T) {
 		// Evaluate XOR wit hthe network
-		in, out, solved := XorEvaluatre(net)
+		in, out, solved := XorEvaluate(net)
 		if !solved {
 			for i := 0; i < len(out); i++ {
 				if i == 0 || i == 3 {
@@ -61,7 +61,7 @@ func XorTest(net evo.Network) func(*testing.T) {
 	}
 }
 
-func XorEvaluatre(net evo.Network) (in [][]float64, out []float64, solved bool) {
+func XorEvaluate(net evo.Network) (in [][]float64, out []float64, solved bool) {
 	in = [][]float64{{0, 0}, {1, 0}, {0, 1}, {1, 1}}
 	out = make([]float64, len(in))
 	solved = true // be hopeful :)

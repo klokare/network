@@ -69,9 +69,9 @@ func XorEvaluate(net evo.Network) (in [][]float64, out []float64, solved bool) {
 		outputs, _ := net.Activate(inputs)
 		out[i] = outputs[0]
 		if i == 0 || i == 3 {
-			solved = solved && outputs[0] >= 0.5
-		} else {
 			solved = solved && outputs[0] <= 0.5
+		} else {
+			solved = solved && outputs[0] >= 0.5
 		}
 	}
 	return
